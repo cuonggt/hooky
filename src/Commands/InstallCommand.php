@@ -16,8 +16,7 @@ class InstallCommand extends Command
      */
     protected function configure()
     {
-        $this->setName('install')
-            ->setDescription('Install git hooks');
+        $this->setName('install');
     }
 
     /**
