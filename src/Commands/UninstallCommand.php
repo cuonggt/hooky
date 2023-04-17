@@ -24,7 +24,7 @@ class UninstallCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        Process::fromShellCommandline('git config --unset core.hooksPath');
+        Process::fromShellCommandline('git config --unset core.hooksPath')->run();
 
         return 0;
     }
