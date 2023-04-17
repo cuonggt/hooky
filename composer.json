@@ -1,0 +1,48 @@
+{
+    "name": "cuonggt/hooky",
+    "description": "An opinioned composer git hooks",
+    "keywords": [
+        "git",
+        "hooks",
+        "pre-commit"
+    ],
+    "homepage": "https://github.com/cuonggt/hooky",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/cuonggt/hooky/issues",
+        "source": "https://github.com/cuonggt/hooky"
+    },
+    "authors": [
+        {
+            "name": "Cuong Giang",
+            "email": "thaicuong.giang@gmail.com"
+        }
+    ],
+    "bin": [
+        "bin/hooky"
+    ],
+    "require": {
+        "php": "^7.3|^8.0",
+        "symfony/console": "^4.0|^5.0|^6.0",
+        "symfony/process": "^4.2|^5.0|^6.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpunit/phpunit": "^8.0|^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cuonggt\\Hooky\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cuonggt\\Hooky\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
