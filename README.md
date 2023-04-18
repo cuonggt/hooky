@@ -40,4 +40,4 @@ git commit -m "Keep calm and commit"
 <a name="license"></a>
 ## License
 
-Pint is open-sourced software licensed under the [MIT license](LICENSE.md).
+Hooky is open-sourced software licensed under the [MIT license](LICENSE.md).
