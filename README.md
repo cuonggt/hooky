@@ -32,7 +32,7 @@ vendor/bin/hooky add .hooky/pre-commit "vendor/bin/phpunit"
 Make a commit:
 
 ```sh
-git add .husky/pre-commit
+git add .hooky/pre-commit
 git commit -m "Keep calm and commit"
 # `vendor/bin/phpunit` will run
 ```
