@@ -27,9 +27,7 @@ class AddCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $file = $input->getArgument('file');
-
-        Hooky::add($file, $input->getArgument('cmd'));
+        Hooky::add($file = $input->getArgument('file'), $input->getArgument('cmd'));
 
         $output->writeln("updated {$file}");
 
