@@ -2,6 +2,7 @@
 
 namespace Cuonggt\Hooky\Commands;
 
+use Cuonggt\Hooky\Hooky;
 use Exception;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -38,18 +39,8 @@ class InstallCommand extends Command
             throw new Exception(".git can't be found!");
         }
 
-        if (! is_dir('.hooky/_')) {
-            mkdir('.hooky/_', 0755, true);
-        }
-
         try {
-            $fp = fopen('.hooky/_/.gitignore', 'w');
-            fwrite($fp, '*');
-            fclose($fp);
-
-            copy(__DIR__.'/../../hooky.sh', '.hooky/_/hooky.sh');
-
-            Process::fromShellCommandline('git config core.hooksPath .hooky')->run();
+            Hooky::install();
         } catch (Exception $e) {
             $output->writeln('Git hooks failed to install');
             throw $e;
