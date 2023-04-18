@@ -11,8 +11,9 @@ if (file_exists(__DIR__.'/../../../autoload.php')) {
 }
 
 $application = new Application('Hooky', '0.1.0');
-$application->add(new Commands\InstallCommand());
 $application->add(new Commands\AddCommand());
+$application->add(new Commands\InstallCommand());
+$application->add(new Commands\SetCommand());
 $application->add(new Commands\UninstallCommand());
 
 $application->run();

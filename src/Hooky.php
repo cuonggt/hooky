@@ -19,7 +19,7 @@ class Hooky
 
         $fp = fopen($file, 'w');
         fwrite($fp, "#!/usr/bin/env sh\n");
-        fwrite($fp, ". \"$(dirname -- \"$0\")/_/hooky.sh\"\n");
+        fwrite($fp, ". \"$(dirname -- \"$0\")/_/hooky.sh\"\n\n");
         fwrite($fp, "{$cmd}\n");
         fclose($fp);
         chmod($file, 0755);
@@ -32,12 +32,12 @@ class Hooky
      */
     public static function add(string $file, string $cmd)
     {
-        if (! file_exists($file)) {
-            return static::set($file, $cmd);
+        if (file_exists($file)) {
+            $fp = fopen($file, 'a');
+            fwrite($fp, "{$cmd}\n");
+            fclose($fp);
+        } else {
+            static::set($file, $cmd);
         }
-
-        $fp = fopen($file, 'a');
-        fwrite($fp, "{$cmd}\n");
-        fclose($fp);
     }
 }
