@@ -3,7 +3,6 @@
 namespace Cuonggt\Hooky\Commands;
 
 use Exception;
-use RuntimeException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -36,7 +35,7 @@ class InstallCommand extends Command
         }
 
         if (! is_dir('.git')) {
-            throw new RuntimeException(".git can't be found!");
+            throw new Exception(".git can't be found!");
         }
 
         if (! is_dir('.hooky/_')) {

@@ -8,14 +8,14 @@ use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class AddCommand extends Command
+class SetCommand extends Command
 {
     /**
      * Configures the current command.
      */
     protected function configure()
     {
-        $this->setName('add')
+        $this->setName('set')
             ->addArgument('file', InputArgument::REQUIRED)
             ->addArgument('cmd', InputArgument::REQUIRED);
     }
@@ -27,11 +27,9 @@ class AddCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $file = $input->getArgument('file');
+        Hooky::set($file = $input->getArgument('file'), $input->getArgument('cmd'));
 
-        Hooky::add($file, $input->getArgument('cmd'));
-
-        $output->writeln("updated {$file}");
+        $output->writeln("created {$file}");
 
         return 0;
     }
