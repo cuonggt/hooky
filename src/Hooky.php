@@ -23,7 +23,7 @@ class Hooky
 
         copy(__DIR__.'/../hooky.sh', $dir.'/_/hooky.sh');
 
-        Process::fromShellCommandline('git config core.hooksPath .hooky')->run();
+        Process::fromShellCommandline('git config core.hooksPath '.$dir)->run();
     }
 
     /**

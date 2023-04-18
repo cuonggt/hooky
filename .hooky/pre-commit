@@ -2,4 +2,4 @@
 . "$(dirname -- "$0")/_/hooky.sh"
 
 vendor/bin/phpstan
-vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.dist.php --dry-run
+vendor/bin/php-cs-fixer fix --dry-run --stop-on-violation
