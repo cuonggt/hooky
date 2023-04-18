@@ -21,7 +21,7 @@ class Hooky
         fwrite($fp, '*');
         fclose($fp);
 
-        copy(__DIR__.'/../../hooky.sh', $dir.'/_/hooky.sh');
+        copy(__DIR__.'/../hooky.sh', $dir.'/_/hooky.sh');
 
         Process::fromShellCommandline('git config core.hooksPath .hooky')->run();
     }
