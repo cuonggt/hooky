@@ -16,7 +16,7 @@ class AddCommand extends Command
     protected function configure()
     {
         $this->setName('add')
-            ->addArgument('file',     InputArgument::REQUIRED)
+            ->addArgument('file', InputArgument::REQUIRED)
             ->addArgument('cmd', InputArgument::REQUIRED);
     }
 
