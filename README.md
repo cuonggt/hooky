@@ -1,1 +1,1 @@
-# composer-git-hooks
+# hooky
