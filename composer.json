@@ -1,6 +1,6 @@
 {
     "name": "cuonggt/hooky",
-    "description": "An opinioned composer git hooks",
+    "description": "An opinionated git hooks tool for PHP.",
     "keywords": [
         "git",
         "hooks",
