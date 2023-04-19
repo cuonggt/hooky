@@ -3,7 +3,7 @@
 <a name="introduction"></a>
 ## Introduction
 
-**Hooky** is an opinionated git hooks tool for PHP artisan. Hooky is heavily inspired of **[husky](https://github.com/typicode/husky)** and make it simple to **lint your commit messages**, **lint code**, **run tests**, etc... when you commit or push.
+**Hooky** is an opinionated git hooks tool for PHP artisan. Hooky is heavily inspired by **[husky](https://github.com/typicode/husky)** and make it simple to **lint your commit messages**, **lint code**, **run tests**, etc... when you commit or push.
 
 <a name="installation"></a>
 ## Installation
