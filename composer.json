@@ -46,9 +46,8 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "prepare": "@php ./bin/hooky install",
         "post-autoload-dump": [
-            "[ $COMPOSER_DEV_MODE -eq 0 ] || composer prepare"
+            "@php ./bin/hooky install"
         ]
     }
 }
