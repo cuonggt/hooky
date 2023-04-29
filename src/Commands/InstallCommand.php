@@ -26,6 +26,11 @@ class InstallCommand extends Command
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
+        if (getenv('HOOKY') === '0') {
+            $output->writeln('HOOKY env variable is set to 0, skipping install');
+            return Command::FAILURE;
+        }
+
         $process = new Process(['git', 'rev-parse']);
 
         $process->run();
